@@ -1,3 +1,4 @@
+<p align="center"><img src="docs/_media/logo.png"/></p>
 <h1 align="center" style="border-bottom: none;">包菜 -- 包你有菜</h1>
 <h3 align="center">包菜是谱蓝为上海人民开发的一款自动抢菜软件，解决疫情期间上海人民吃菜难的问题。</h3>
 <p align="center">
