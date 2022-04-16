@@ -1,0 +1,8 @@
+*.ui
+*.qrc
+.idea
+build
+dist
+build.spec
+sources/win_tools
+sources/mac_tools
