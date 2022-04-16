@@ -1,4 +1,4 @@
-<img src="_media/logo.png" height="200" alt="logo" align=center />
+<img src="_media/logo.png" height="128" alt="logo" align=center />
 
 # 包菜 -- 包你有菜
 
