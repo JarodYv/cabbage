@@ -6,3 +6,4 @@ dist
 build.spec
 sources/win_tools
 sources/mac_tools
+__pycache__
