@@ -7,3 +7,4 @@ build.spec
 sources/win_tools
 sources/mac_tools
 __pycache__
+config.ini

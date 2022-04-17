@@ -84,6 +84,7 @@ class DeviceWidget(QWidget):
 
     def on_thread_start(self):
         self.is_running = True
+        self.ui.textEdit.clear()
         self.append_log("开始执行抢菜程序.....")
         self.ui.is_dingdong.setEnabled(False)
         self.ui.is_meituan.setEnabled(False)

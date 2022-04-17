@@ -1,4 +1,7 @@
 import time
+
+from PySide6.QtCore import QSettings
+
 from core.device import play_voice
 
 
@@ -7,6 +10,10 @@ class Qiang:
         self.is_running = False
         self.signal = signal
         self.count = 0
+        self.config = QSettings('config.ini', QSettings.IniFormat)
+        self.err_sleep = int(self.config.value("err_time", 5))
+        self.op_sleep = int(self.config.value("op_time", 0))
+        self.play_sound = int(self.config.value("play_sound", 1)) == 1
 
     def run(self, device_id: str):
         """ 执行抢菜程序
@@ -23,8 +30,9 @@ class Qiang:
             except Exception as e:
                 print(e)
                 self.signal.emit({"msg": str(e), "type": 4})
-                play_voice("error")
-                time.sleep(5)
+                if self.play_sound:
+                    play_voice("error")
+                time.sleep(self.err_sleep)
 
     def qiang_cai(self, device_id: str):
         raise NotImplementedError

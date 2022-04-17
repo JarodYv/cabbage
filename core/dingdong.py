@@ -77,7 +77,8 @@ class QiangDingdong(Qiang):
                                 '/android.view.ViewGroup[%s]' % str(i + 1)).click_exists(timeout=1)
                             self.signal.emit({"msg": f"点击了第{i + 1}个", "type": 1})
                             if d(text="立即支付").exists:
-                                play_voice("success")
+                                if self.play_sound:
+                                    play_voice("success")
                                 d(text="立即支付").click()
                                 self.signal.emit({"msg": "点击立即支付", "type": 2})
                         if i == hour_count - 1:
@@ -88,17 +89,20 @@ class QiangDingdong(Qiang):
                             self.signal.emit({"msg": "没有运力了", "type": 3})
 
             if d(text="确认交易").exists:
-                play_voice("success")
+                if self.play_sound:
+                    play_voice("success")
                 d(text="确认交易").click()
                 self.signal.emit({"msg": "点击确认交易", "type": 2})
 
             if d(text="确认并支付").exists:
-                play_voice("success")
+                if self.play_sound:
+                    play_voice("success")
                 d(text="确认并支付").click()
                 self.signal.emit({"msg": "点击确认并支付", "type": 2})
 
             if d(resourceId="btn-line").exists:
-                play_voice("success")
+                if self.play_sound:
+                    play_voice("success")
                 d(resourceId="btn-line").click()
                 self.signal.emit({"msg": "确认支付", "type": 2})
 
@@ -106,3 +110,5 @@ class QiangDingdong(Qiang):
             self.signal.emit({"msg": "本次花费时间: <b>{:.2f}秒</b>".format(time.time() - start), "type": 0})
             self.signal.emit({"msg": "总共花费时间: <b>{:.2f}分</b>".format((time.time() - time_start) / 60), "type": 0})
             self.count += 1
+            if self.op_sleep > 0:
+                time.sleep(self.op_sleep)

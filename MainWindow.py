@@ -5,7 +5,7 @@ from main_window import Ui_MainWindow
 from dialog.AboutDialog import AboutDialog
 from dialog.HelpDialog import HelpDialog
 from PySide6.QtWidgets import QMainWindow, QListWidgetItem
-from PySide6.QtCore import Qt, QSettings
+from PySide6.QtCore import Qt
 from core.device import get_device_list
 from widget.DeviceWidget import DeviceWidget
 
@@ -26,7 +26,6 @@ class MainWindow(QMainWindow):
         self.ui.btn_init.clicked.connect(self.init_device)
         self.ui.listWidget.setFocusPolicy(Qt.FocusPolicy.NoFocus)
         self.back2home()
-        self.config = QSettings('config.ini', QSettings.IniFormat)
 
     def back2home(self):
         self.ui.listWidget.clear()
