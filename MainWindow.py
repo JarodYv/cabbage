@@ -1,7 +1,10 @@
+from PySide6 import QtGui, QtCore
+
+from dialog.SettingDialog import SettingDialog
 from main_window import Ui_MainWindow
 from dialog.AboutDialog import AboutDialog
 from dialog.HelpDialog import HelpDialog
-from PySide6.QtWidgets import QMainWindow, QMessageBox, QListWidgetItem
+from PySide6.QtWidgets import QMainWindow, QListWidgetItem
 from PySide6.QtCore import Qt, QSettings
 from core.device import get_device_list
 from widget.DeviceWidget import DeviceWidget
@@ -15,11 +18,10 @@ class MainWindow(QMainWindow):
         self.ui.setupUi(self)
         self.current_page = None
         self.last_page = None
-        # self.ui.btn_home.clicked.connect(
-        #     lambda: QtGui.QDesktopServices.openUrl(QtCore.QUrl('https://github.com/JarodYv/why2do')))
+        self.ui.btn_tutor.clicked.connect(
+            lambda: QtGui.QDesktopServices.openUrl(QtCore.QUrl('https://cabbage.planplus.cn')))
         self.ui.btn_home.clicked.connect(self.back2home)
-        self.ui.btn_setting.clicked.connect(
-            lambda: QMessageBox.information(self, "设置", "还没有设置项", QMessageBox.Yes, QMessageBox.Yes))
+        self.ui.btn_setting.clicked.connect(lambda: SettingDialog().exec())
         self.ui.btn_about.clicked.connect(lambda: AboutDialog().exec())
         self.ui.btn_init.clicked.connect(self.init_device)
         self.ui.listWidget.setFocusPolicy(Qt.FocusPolicy.NoFocus)

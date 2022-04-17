@@ -331,6 +331,22 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_4.addWidget(self.widget_10)
 
+        self.btn_tutor = QPushButton(self.widget_4)
+        self.btn_tutor.setObjectName(u"btn_tutor")
+        self.btn_tutor.setStyleSheet(u"QPushButton{\n"
+"	color: #333;\n"
+"	border: 1px solid #ccc;\n"
+"	border-radius: 4px;\n"
+"	margin: 0 20px;\n"
+"}\n"
+"\n"
+"QPushButton::hover{\n"
+"	border: 1px solid #adadad;\n"
+"	background-color: #e6e6e6;\n"
+"}")
+
+        self.verticalLayout_4.addWidget(self.btn_tutor)
+
 
         self.verticalLayout_5.addWidget(self.widget_4)
 
@@ -547,6 +563,7 @@ class Ui_MainWindow(object):
 "\u786e\u8ba4\u8d2d\u7269\u8f66\u4e2d\u6709\u5546\u54c1\uff0c\u7136\u540e\u70b9\u51fb\u3010\u7f8e\u56e2\u62a2\u83dc\u3011\u6309\u94ae\u6216\u3010\u53ee\u549a\u62a2\u83dc\u3011\u6309\u94ae\uff1b", None))
         self.label_18.setText(QCoreApplication.translate("MainWindow", u"\u7b2c4\u6b65\uff1a", None))
         self.label_13.setText(QCoreApplication.translate("MainWindow", u"\u70b9\u51fb\u62a2\u83dc\u6309\u94ae\u540e\uff0c\u8f6f\u4ef6\u4f1a\u81ea\u52a8\u5237\u65b0\u754c\u9762\u5e2e\u4f60\u62a2\u83dc\uff0c\u62a2\u83dc\u5de5\u4f5c\u653e\u5fc3\u4ea4\u7ed9\u5305\u83dc\u5c31\u597d\u3002", None))
+        self.btn_tutor.setText(QCoreApplication.translate("MainWindow", u"\u67e5\u770b\u56fe\u6587\u7248\u6559\u7a0b", None))
         self.label_14.setText("")
         self.label_11.setText(QCoreApplication.translate("MainWindow", u"\u5305\u83dc\u5047\u8bbe\u60a8\u5df2\u7ecf\u51c6\u5907\u597d\u624b\u673a\uff0c\u63a5\u4e0b\u6765\u8fdb\u884c\u7b2c2\u6b65\u3010\u8bbe\u5907\u521d\u59cb\u5316\u3011\n"
 "\u8bf7\u5c06Android\u624b\u673a\u8fde\u63a5\u672c\u7535\u8111\uff0c\u7136\u540e\u70b9\u51fb\u8bbe\u5907\u521d\u59cb\u5316\u6309\u94ae", None))
