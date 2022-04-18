@@ -8,7 +8,7 @@ from file_utils import resource_path
 import time
 
 
-def connect_phone(device_name):
+def connect_phone(device_name: str) -> u2.Device:
     """ 连接手机
 
     :param device_name:
@@ -23,7 +23,11 @@ def connect_phone(device_name):
     return d
 
 
-def is_mac():
+def is_mac() -> bool:
+    """ 判断当前操作系统是否是Mac
+
+    :return:
+    """
     system = platform.system()
     if system == "Windows":
         print("当前系统是Windows")
@@ -33,7 +37,7 @@ def is_mac():
         return True
 
 
-def get_device_list() -> list:
+def get_device_list() -> list[dict]:
     # root_path = os.getcwd()
     if is_mac():
         adb_path = resource_path(f"sources/mac_tools/adb")
@@ -63,7 +67,7 @@ def get_device_list() -> list:
     return phone_infos
 
 
-def play_voice(content):
+def play_voice(content: str):
     """
     播放声音提醒
     """

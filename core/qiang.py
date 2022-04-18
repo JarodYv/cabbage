@@ -18,9 +18,9 @@ class Qiang:
     def run(self, device_id: str):
         """ 执行抢菜程序
 
-            :param device_id: 设备编号
-            :return:
-            """
+        :param device_id: 设备编号
+        :return:
+        """
         # play_voice("start")
         print("开始执行抢菜程序.....")
         self.is_running = True

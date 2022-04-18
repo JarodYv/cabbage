@@ -15,19 +15,23 @@ class QiangDingdong(Qiang):
         """
         return time.strftime('%H:%M') >= the_time  # '05:59'
 
-    # 获取当前的时间
     @classmethod
     def get_current_hour(cls, d):
+        """ 获取当前的时间
+
+        :param d:
+        :return:
+        """
         info = d.xpath('//*[@resource-id="com.yaya.zone:id/rv_selected_hour"]').get(timeout=1).info
         return info.get("childCount", 0)
 
-    def qiang_cai(self, device_name: str):
+    def qiang_cai(self, device_id: str):
         """ 叮咚抢菜核心逻辑
 
-        :param device_name:
+        :param device_id: 设备id
         :return:
         """
-        d = connect_phone(device_name)
+        d = connect_phone(device_id)
         self.count = 1
         time_start = time.time()
         # 此处填设备编号

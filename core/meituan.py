@@ -10,7 +10,7 @@ class QiangMeituan(Qiang):
     def qiang_cai(self, device_id: str):
         """ 美团抢菜核心逻辑
 
-        :param device_id:
+        :param device_id: 设备id
         :return:
         """
         d = connect_phone(device_id)
