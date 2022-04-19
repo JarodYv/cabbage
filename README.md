@@ -81,6 +81,17 @@
 uiautomator2是开源项目，安全可靠，没有后门，大家可以放心安装。
 <p align="center"><img alt="" src="docs/_media/p7.jpg"></p>
 
+### 4. 杀毒软件报木马
+
+如果电脑上安装了腾讯手机管家等杀毒软件，可能会报软件中有盗号木马，如下图：
+
+<p align="center"><img alt="" src="docs/_media/p8.jpg"></p>
+
+导致杀毒软件报木马的原因依然是包菜使用 [uiautomator2](https://github.com/openatx/uiautomator2) 作为自动化框架，uiautomator2会被部分杀毒软件识别为盗号木马。
+
+包菜源代码开放，大家可以审查代码逻辑，**我们保证软件不包含任何后门和窃取客户数据的行为**。
+
+
 ## 声明
 
 **请合理使用本软件，不要恶意抢夺资源。**

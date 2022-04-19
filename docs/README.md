@@ -42,18 +42,18 @@
 ### 第一步
 
 打开”包菜“，将手机连接电脑，点击 **初始化设备** 按钮。
-<p align="center"><img alt="" src="/_media/p1.png"></p>
+<p align="center"><img alt="" src="_media/p1.png"></p>
 
 ### 第二步
 
 设备初始化完成后，软件会跳转到设备列表界面。
 
 手机上打开美团外卖或叮咚买菜，进入购物车界面，然后点击 **开始抢菜** 按钮。
-<p align="center"><img alt="" src="/_media/p2.png"></p>
+<p align="center"><img alt="" src="_media/p2.png"></p>
 
 ### 第三步
 抢到菜后软件会播报声音，请及时支付。
-<p align="center"><img alt="" src="/_media/p3.png"></p>
+<p align="center"><img alt="" src="_media/p3.png"></p>
 软件运行过程中，你可以随时停止抢菜进程。
 
 ## 常见问题
@@ -61,7 +61,7 @@
 ### 1. 设备初始化失败
 
 这是由于手机和电脑未正确连接导致的。包菜操控手机需要打开 **开发者模式 -- USB调试**，如下图：
-<p align="center"><img alt="" src="/_media/p4.jpg"><img alt="" src="/_media/p5.jpg"></p>
+<p align="center"><img alt="" src="_media/p4.jpg"><img alt="" src="/_media/p5.jpg"></p>
 不同型号手机开启USB调试的方法不同，具体请参考: 
 
 - [华为手机开启USB调试](https://zhuanlan.zhihu.com/p/429854110) 
@@ -73,13 +73,23 @@
 ### 2. 开启了USB调试还是无法初始化设备
 
 这可能是手机与电脑的连接模式不对。以华为手机为例，手机与电脑连接后默认是”仅充电模式“。此时需要下来展开系统通知菜单，点击”正在通过USB充电“，在弹出的USB连接方式菜单中选择”MIDI“。
-<p align="center"><img alt="" src="/_media/p6.jpg"></p>
+<p align="center"><img alt="" src="_media/p6.jpg"></p>
 
 ### 3. 为什么会在我手机上安装ATX？
 
 包菜操控手机上的软件需要一个代理，ATX就是这个代理应用。ATX来自测试框架 [uiautomator2](https://github.com/openatx/uiautomator2) ，
 uiautomator2是开源项目，安全可靠，没有后门，大家可以放心安装。
-<p align="center"><img alt="" src="/_media/p7.jpg"></p>
+<p align="center"><img alt="" src="_media/p7.jpg"></p>
+
+### 4. 杀毒软件报木马
+
+如果电脑上安装了腾讯手机管家等杀毒软件，可能会报软件中有盗号木马，如下图：
+
+<p align="center"><img alt="" src="_media/p8.jpg"></p>
+
+导致杀毒软件报木马的原因依然是包菜使用 [uiautomator2](https://github.com/openatx/uiautomator2) 作为自动化框架，uiautomator2会被部分杀毒软件识别为盗号木马。
+
+包菜源代码开放，大家可以审查代码逻辑，**我们保证软件不包含任何后门和窃取客户数据的行为**。
 
 ## 声明
 
